@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Quản lý sách
+    </title>
+
+</head>
+
+<body>
+
+    <h1>
+        📚 Quản lý sách
+    </h1>
+
+
+    <a href="/books/add">
+        ➕ Thêm sách
+    </a>
+
+
+    <br><br>
+
+
+    <table border="1"
+           cellpadding="10">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Mã sản phẩm
+                </th>
+
+                <th>
+                    Tên sách
+                </th>
+
+                <th>
+                    Giá gốc
+                </th>
+
+                <th>
+                    VAT
+                </th>
+
+                <th>
+                    Giá sau thuế
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            {{#each books}}
+
+            <tr>
+
+                <td>
+                    {{productCode}}
+                </td>
+
+                <td>
+                    {{name}}
+                </td>
+
+                <td>
+                    {{price}}
+                </td>
+
+                <td>
+                    {{vat}}%
+                </td>
+
+                <td>
+                    {{priceAfterTax}}
+                </td>
+
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+
+    </table>
+
+
+    <footer>
+
+        <hr>
+
+        <p>
+            Họ tên:
+            {{fullName}}
+        </p>
+
+        <p>
+            MSSV:
+            {{mssv}}
+        </p>
+
+        <p>
+            VAT áp dụng:
+            {{vat}}%
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
